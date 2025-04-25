@@ -56,3 +56,16 @@ bot.on('spawn',function() {
     connected=1;
 });
 
+// Sunucu oluşturma ve proje aktivitesi sağlama.
+const express = require('express');
+const app = express();
+const port = 8080;
+
+// Web sunucu
+app.get('/', (req, res) => {
+  res.sendStatus(200);
+});
+
+app.listen(port, () => {
+  console.log(`Sunucu ${port} numaralı bağlantı noktasında yürütülüyor.`);
+});
